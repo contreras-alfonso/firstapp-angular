@@ -1,0 +1,23 @@
+<form (ngSubmit)="emitCharacter()" class="flex flex-col gap-3">
+  <h4 class="font-black text-xl mb-2">Agregar Personaje</h4>
+  <input
+    type="text"
+    name="name"
+    class="border py-2 px-3 rounded-lg "
+    placeholder="Nombre del personaje"
+    [(ngModel)]="character.name"
+  />
+  <input
+    [(ngModel)]="character.poder"
+    type="number"
+    name="power"
+    class="border py-2 px-3 rounded-lg"
+    placeholder="Poder"
+  />
+  <button type="submit"
+    class="rounded-lg text-sm bg-teal-500 text-white py-3 px-5 hover:bg-teal-600"
+  >
+    Agregar
+  </button>
+
+</form>

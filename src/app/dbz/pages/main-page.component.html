@@ -1,0 +1,15 @@
+<h1
+  class="font-black text-4xl bg-blue-50 text-center py-3 rounded-lg text-black"
+>
+  DBz Personajes
+</h1>
+<hr />
+
+<div class="p-5">
+  <dbz-list [characterList]="characters()" (onDeleteCharacter)="onDeleteCharacter($event)"></dbz-list>
+
+</div>
+
+<div class="p-5">
+  <dbz-character-add (onNewCharacter)="onNewCharacter($event)"></dbz-character-add>
+</div>

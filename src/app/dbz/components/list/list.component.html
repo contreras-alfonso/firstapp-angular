@@ -1,0 +1,13 @@
+<h4 class="font-black text-xl mb-3">Listado</h4>
+<ul>
+  <li *ngFor="let character of characterList; let i = index; let isFirst = first; let isLast = last;"
+    [ngClass]="{'bg-blue-50':isFirst, 'bg-red-50':isLast}" class="flex items-center justify-between px-5 py-2"
+  >
+    <div>
+      <span class="text-black font-bold">{{i+1}}.</span>
+      {{ character.name }} - Power: {{ character.poder }}
+    </div>
+
+    <button class="text-end text-white bg-red-500 border border-red-600 py-1 px-3 hover:bg-red-600 rounded-lg" (click)="deleteCharacter(character.id!)">x</button>
+  </li>
+</ul>
